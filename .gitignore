@@ -1,0 +1,67 @@
+/CMakeLists.txt.user
+
+# /
+/.adm
+/sun
+/lin
+/mac
+/ao1
+/sil
+/wnt
+/drv
+/inc
+/work
+/build
+/install
+/win32
+/win64
+
+# /adm/
+/adm/win32
+/adm/win64
+/adm/msvc
+/adm/lin
+/adm/mac
+
+# standard names of directories for objects and binaries for samples
+bin
+bind
+obj
+objd
+Debug
+Release
+Backup
+UpgradeLog*
+
+# /samples
+/samples/csharp/win32
+/samples/csharp/win64
+/samples/csharp/OCCCSharp/Wrappers
+/samples/csharp/OCCCSharp/OCCCSharp.csproj
+/samples/csharp/OCCwrapCSharp/occcsharp_wrap.h
+/samples/csharp/OCCwrapCSharp/occcsharp_wrap.cxx
+/samples/csharp/*/obj
+*.vcproj*user
+*.csproj*user
+*.ncb
+*.suo
+*.sdf
+*.opensdf
+*.vcproj.*.user
+*.ipch
+
+# test results
+/results
+
+/samples/java/win*
+/samples/java/lin*
+/samples/java/OCCwrapJava/occjava_wrap.cxx
+/samples/java/OCCJava
+/samples/java/jar
+/samples/java/ipch
+*.log
+
+# Generated files
+/codeblocks.*
+/custom.*
+/draw.*

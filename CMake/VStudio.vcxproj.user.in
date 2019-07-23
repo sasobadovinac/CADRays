@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<PropertyGroup Condition="'$(Configuration)'=='Debug'">
+  <LocalDebuggerEnvironment>PATH=@VSTUDIO_Debug_ENVIRONMENT@;%PATH%
+  </LocalDebuggerEnvironment>
+  <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+</PropertyGroup>
+<PropertyGroup Condition="'$(Configuration)'=='MinSizeRel'">
+  <LocalDebuggerEnvironment>PATH=@VSTUDIO_MinSizeRel_ENVIRONMENT@;%PATH%
+  </LocalDebuggerEnvironment>
+  <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+</PropertyGroup>
+<PropertyGroup Condition="'$(Configuration)'=='Release'">
+  <LocalDebuggerEnvironment>PATH=@VSTUDIO_Release_ENVIRONMENT@;%PATH%
+  </LocalDebuggerEnvironment>
+  <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+</PropertyGroup>
+<PropertyGroup Condition="'$(Configuration)'=='RelWithDebInfo'">
+  <LocalDebuggerEnvironment>PATH=@VSTUDIO_RelWithDebInfo_ENVIRONMENT@;%PATH%
+  </LocalDebuggerEnvironment>
+  <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+</PropertyGroup>
+</Project>

@@ -1,0 +1,22 @@
+set "CERT_NAME=OPEN CASCADE"
+set "INSTALL_DIR=@CMAKE_INSTALL_PREFIX@"
+call "%VS140COMNTOOLS%..\..\VC\vcvarsall.bat"
+
+setlocal enabledelayedexpansion enableextensions
+pushd "%INSTALL_DIR%"
+
+rem Collect files to sign
+set "aFileList=CADRays.exe"
+for /r %%f in (*.dll) do (
+  set aFile=%%f
+  set aFileRel=!aFile:%CD%\=!
+  if not ["!aFileRel!"] == ["msvcp140.dll"] (if not ["!aFileRel!"] == ["msvcr140.dll"] (if not ["!aFileRel!"] == ["vcruntime140.dll"] (set "aFileList=!aFileList! !aFileRel!")))
+)
+rem echo %aFileList%
+
+rem Perform signing itself
+SignTool.exe sign /n "%CERT_NAME%" /t http://timestamp.verisign.com/scripts/timstamp.dll /d "CADRays" %aFileList%
+
+popd
+
+pause
